@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOT - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">🤖</span>
+                    ROBOT
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAE15 Traiter des données</p>
+                <div class="tags">
+                    <span class="tag">Arduino</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                       Dans le cadre de ma formation en BUT Réseaux & Télécommunications, j’ai réalisé la SAÉ 15 en lien avec la ressource Fondamentaux de la programmation. Ce projet avait pour objectif de programmer un robot autonome à l’aide d’Arduino afin de relever différents défis techniques et de mettre en pratique les bases de la programmation sur un système concret mêlant matériel et logiciel.
+                    </p>
+                    <p>
+                        J’ai travaillé sur le challenge “Réaliser trois tours de circuit”, qui consistait à faire suivre au robot une ligne tracée au sol de manière autonome. Le robot devait démarrer après une séquence précise, suivre correctement un circuit en forme de 8, compter les tours effectués et s’arrêter exactement à son point de départ après trois tours complets, tout en indiquant son état grâce à des changements de couleur de la LED.
+                    </p>
+                    <p>
+                       Pour répondre à ce défi, j’ai conçu un algorithme de suivi de ligne basé sur les capteurs embarqués, permettant d’ajuster la direction et la vitesse du robot en temps réel. J’ai également mis en place un système de détection de la ligne de départ pour gérer le comptage des tours et l’arrêt final. Ce projet m’a permis de renforcer mes compétences en programmation, en logique algorithmique et en interaction entre hardware et software, des domaines qui m’intéressent particulièrement.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=cwlhzjhDH2c">Lien vers le résultat du projet</a>
+
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Conception et implémentation d’un algorithme de suivi de ligne autonome</li>
+                            <li>Utilisation des capteurs de ligne pour ajuster la direction et la vitesse du robot</li>
+                            <li>Mise en place d’un système de comptage des tours via la détection de la ligne de départ</li>
+                            <li>Gestion des états du robot à l’aide de la LED multicolore (démarrage, tours, arrêt)</li>
+                            <li>Réalisation de tests et ajustements pour assurer un arrêt précis après trois tours</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="robot.webp" alt="Robot autonome">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

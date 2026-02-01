@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réseau - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">🌐</span>
+                    Réseau
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAE12 S'initier aux réseaux informatiques</p>
+                <div class="tags">
+                    <span class="tag">Apache</span>
+                    <span class="tag">Samba</span>
+                    <span class="tag">Wireshark</span>
+                    <span class="tag">Raspberry Pi</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                       Dans le cadre de ma formation en BUT Réseaux & Télécommunications, j’ai réalisé la SAÉ 12 « S’initier aux réseaux informatiques ». Ce projet avait pour objectif de concevoir, déployer et diagnostiquer un petit réseau pédagogique mêlant matériel et services logiciels afin d’appliquer les fondamentaux des réseaux sur un système concret. J’ai mis en place un réseau composé d’un Raspberry Pi et d’un poste client et j’ai installé un serveur Apache hébergeant une page de suivi/agenda accessible depuis le réseau.
+                    </p>
+                    <p>
+                        Sur le plan technique, j’ai sécurisé les accès SSH (authentification par mot de passe puis par paire de clés), déployé des partages NFS et Samba pour l’échange de fichiers, et vérifié l’intégrité d’images système via SHA256. J’ai également réalisé des scans réseau (Nmap), des tests de connectivité (ping, traceroute, ARP) et des captures de paquets avec Wireshark pour diagnostiquer et valider le bon fonctionnement des services.
+                    </p>
+                    <p>
+                       J’ai documenté chaque étape du projet (jalons, captures d’écran, commandes utilisées) et produit un rapport synthétique accompagné d’une présentation. Ce travail m’a permis de renforcer mes compétences en administration Linux, en sécurisation des accès, en diagnostic réseau et en gestion de projet technique. J’ai gagné en autonomie pour déployer un service réseau complet sur un Raspberry Pi et pour identifier et corriger des incidents de configuration et de connectivité.
+                    </p>
+                    <a href="jalon1_Di_gusto_Ruffinoni.pdf.pdf">jalon 1</a>
+                    <a href="jalon2_Di_gusto_Ruffinoni.pdf.pdf">jalon 2</a>
+                    <a href="Jalon3_di_gusto_ruffinoni (2).pdf">jalon 3</a>
+                    <a href="Jalon4_Di_gusto_Ruffinoni.pdf">jalon 4</a>
+                    <a href="Jalon5_Di_gusto_Ruffinoni.pdf">jalon 5</a>
+                    <a href="Jalon6_Di_gusto_Ruffinoni.pdf">jalon 6</a>
+                    <a href="Jalon7_Di_gusto_Ruffinoni.pdf">jalon 7</a>
+                    <a href="Jalon8_Di_gusto_Ruffinoni (1).pdf">jalon 8</a>
+                    <a href="Jalon9_Di_gusto_Ruffinoni (1).pdf">jalon 9</a>
+
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Installation et configuration d’un serveur web (Apache)</li>
+                            <li>Sécurisation des accès SSH (authentification par clés)</li>
+                            <li>Partages de fichiers (NFS, Samba)</li>
+                            <li>Vérification d’intégrité d’images (SHA256)</li>
+                            <li>Scan et découverte réseau (Nmap)</li>
+                            <li>Captures et analyses de trafic (Wireshark)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="raspberry.webp" alt="Robot autonome">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linephone - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">📊</span>
+                    Linephone
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAE22 Mesurer et caractériser un signal ou un système</p>
+                <div class="tags">
+                    <span class="tag">FreePBX</span>
+                    <span class="tag">Asterisk</span>
+                    <span class="tag">GNU Radio</span>
+                    <span class="tag">linephone</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                        J’ai participé à un projet portant sur la mise en œuvre et l’analyse d’un système de téléphonie sur IP (VoIP). L’objectif principal de ce travail était de comprendre le fonctionnement global d’une chaîne de communication VoIP, depuis la numérisation du signal audio jusqu’à sa transmission sur un réseau IP, en utilisant des outils et des logiciels professionnels.
+                    </p>
+                    <p>
+                        Pour cela, une infrastructure VoIP a été mise en place à l’aide d’un serveur basé sur FreePBX et Asterisk, installé sur un Raspberry Pi. Plusieurs postes clients ont ensuite été configurés avec le softphone Linphone afin d’établir des communications audio. Différents paramètres de transmission ont été modifiés, tels que les codecs utilisés, le débit binaire et la fréquence d’échantillonnage, afin d’observer leur influence sur la qualité de la communication.   
+                    </p>
+                    <p>
+                        En parallèle, des analyses du signal audio ont été réalisées à l’aide de GNU Radio. Ces analyses ont permis d’étudier le spectre du signal, la bande passante occupée ainsi que le rapport signal sur bruit. Les performances du système ont également été évaluées en mesurant la latence et en réalisant une évaluation subjective de la qualité d’écoute à l’aide de l’échelle MOS. Enfin, l’ensemble des résultats obtenus lors des expérimentations a été comparé aux valeurs théoriques étudiées en cours, permettant de mieux comprendre les écarts entre théorie et pratique et d’évaluer les limites du système VoIP mis en place.
+                    </p>
+                    <a href="Compte rendu SAE22 _ Mesurer ou caractériser un signal ou un système.pdf">rapport</a>
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Installation et configuration d’un serveur VoIP basé sur FreePBX / Asterisk sur Raspberry Pi</li>
+                            <li>Mise en place d’une infrastructure réseau locale permettant la communication VoIP entre plusieurs machines</li>
+                            <li>Configuration et utilisation du softphone Linphone avec différents codecs, débits et fréquences d’échantillonnage</li>
+                            <li>Analyse et caractérisation des signaux audio numérisés utilisés en téléphonie VoIP</li>
+                            <li>Mesure des paramètres clés d’un système de transmission : bande passante, spectre, rapport signal/bruit (SNR) et latence</li>
+                            <li>Utilisation de GNU Radio pour l’acquisition, le traitement et la visualisation des signaux</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="linephone.webp" alt="Robot autonome">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

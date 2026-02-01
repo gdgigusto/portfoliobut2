@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOTME - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">🕵️‍♂️</span>
+                    ROOTME
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAE22 Mesurer et caractériser un signal ou un système</p>
+                <div class="tags">
+                    <span class="tag">Burpsuite</span>
+                    <span class="tag">sqlmap</span>
+                    <span class="tag">Metasploit</span>
+                    <span class="tag">nmap</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                        Dans le cadre de ma formation en BUT Réseaux et Télécommunications, j’ai réalisé la SAÉ 304, un projet centré sur la cybersécurité ayant pour objectif de me confronter à des situations concrètes d’analyse et d’exploitation de failles de sécurité. Cette SAÉ s’appuyait sur l’utilisation de la plateforme Root-Me.pro, qui propose de nombreux challenges organisés en modules de difficulté progressive. Ces exercices permettent de découvrir différents domaines de la cybersécurité tout en développant une compréhension globale des mécanismes de protection et des vulnérabilités des systèmes informatiques.
+                    </p>
+                    <p>
+                       Au cours de cette SAÉ, j’ai été amené à résoudre plusieurs challenges de niveaux très facile à intermédiaire et à produire différents livrables, comprenant notamment une vidéo explicative sur la résolution d’un challenge, un oral en anglais et un rapport écrit portant sur la résolution détaillée de dix challenges. Les exercices proposés visaient généralement à identifier des failles de sécurité afin d’élever les privilèges d’un utilisateur et d’obtenir des droits administrateur. Pour atteindre cet objectif, il était nécessaire d’analyser le comportement des applications, de tester différentes hypothèses et d’exploiter des vulnérabilités telles que des injections SQL, des failles XSS ou encore des erreurs de configuration. Certains challenges nécessitaient également la conception de scripts pour décoder des trames ou analyser des données, mobilisant ainsi des compétences en programmation et en logique algorithmique. 
+                    </p>
+                    <p>
+                        Cette SAÉ a été particulièrement enrichissante car elle m’a permis de développer une démarche méthodique face à des problématiques complexes, en combinant réflexion, recherche et expérimentation. Elle m’a aidé à renforcer mes compétences en cybersécurité tout en améliorant mon autonomie, ma capacité d’analyse et ma résolution de problèmes. Ce projet m’a également permis de mieux comprendre les enjeux liés à la sécurité des systèmes et des réseaux, ainsi que l’importance d’anticiper et de corriger les vulnérabilités. Cette expérience a renforcé mon intérêt pour la sécurité informatique et constitue une étape importante dans mon parcours de formation en Réseaux et Télécommunications.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=veUjOJprkTA">vidéo de résolution d'un challenge</a>
+                    <br>
+                    <a href="Rappport_SAE305_GABIN_DI_GUSTO.pdf">rapport</a>
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Découverte et prise en main de la plateforme Root-Me pour la résolution de challenges en cybersécurité</li>
+                            <li>Analyse et exploitation de vulnérabilités applicatives afin d’élever des privilèges et d’obtenir des accès administrateur</li>
+                            <li>Identification et exploitation de failles de sécurité courantes telles que les injections SQL et les failles XSS</li>
+                            <li>Analyse du fonctionnement d’applications web et de services afin de détecter des erreurs de configuration ou de logique</li>
+                            <li>Conception et utilisation de scripts pour le décodage de trames, l’analyse de données et l’automatisation de certaines tâches</li>
+                            <li>Mise en œuvre d’une démarche méthodique de résolution de problèmes basée sur l’observation, les tests et la recherche d’informations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="rootme.png" alt="rootme">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

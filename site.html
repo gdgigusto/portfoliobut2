@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">🔗</span>
+                    SITE
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAé 23 Mettre en place une solution informatique pour l’entreprise</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">HTML</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                        Ce projet avait pour objectif de créer une application Web destinée aux étudiants d’une formation universitaire. L’outil développé, appelé pressomètre, permet d’afficher et de suivre chaque jour la pression atmosphérique des lieux de résidence principale et secondaire des étudiants. L’application a été conçue pour cartographier ces données, conserver un historique dans le temps et proposer à la fois des indicateurs individuels et un indicateur collectif représentant la pression moyenne du groupe.
+                    </p>
+                    <p>
+                        L’application a été entièrement réalisée à l’aide des technologies Web courantes, telles que HTML, CSS, JavaScript et PHP. Elle s’appuie sur un service météo en ligne afin de récupérer automatiquement les données de pression atmosphérique correspondant aux villes de résidence renseignées. Les informations concernant les étudiants ont d’abord été préparées sous forme de fichiers CSV et JSON, ce qui a permis d’initialiser facilement la base de données. Ces données ont ensuite été enrichies et mises à jour avec les relevés de pression, enregistrés avec leur date et leur heure.
+                    </p>
+                    <p>
+                        Une interface Web dynamique a été développée pour permettre la consultation des pressomètres individuels et de l’historique des pressions pour chaque étudiant. L’application propose également des fonctionnalités de gestion des données, permettant d’ajouter, modifier ou supprimer des informations directement depuis l’interface. Enfin, une documentation claire a été réalisée afin d’expliquer l’installation, l’utilisation et le fonctionnement de l’outil, accompagnée d’une présentation destinée aux utilisateurs.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=kgCQoWY4GMs">résultat du projet</a>
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Conception et développement d’une application Web permettant de suivre la pression atmosphérique de différents lieux de résidence</li>
+                            <li>Mise en place d’une base de données pour stocker les informations des utilisateurs ainsi que l’historique des mesures de pression</li>
+                            <li>Importation et initialisation des données à partir de fichiers CSV et JSON</li>
+                            <li>Récupération automatique des données météorologiques via un service en ligne</li>
+                            <li>Développement d’une interface Web dynamique pour consulter les pressomètres individuels et les statistiques globales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="site.png" alt="page d'accueil du site">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

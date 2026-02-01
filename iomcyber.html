@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🔒Cybersécurité / 🌐IOM - Détails du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .project-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .project-icon {
+            font-size: 1.2em;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .project-description h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 40px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 30px 20px;
+            }
+
+            .project-title {
+                font-size: 1.8em;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-image {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="portfolio.html" class="back-button">← Retour aux projets</a>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h1 class="project-title">
+                    <span class="project-icon">🔒/🌐</span>
+                     Cybersécurité / IOM 
+                </h1>
+                <p style="color: #666; font-size: 1.1em;">SAE24 Projet intégratif</p>
+                <div class="tags">
+                    <span class="tag">Raspberry pi</span>
+                    <span class="tag">linksys</span>
+                    <span class="tag">Metasploit</span>
+                    <span class="tag">nmap</span>
+                    <span class="tag">nessus</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>📋 Description du projet</h2>
+                    <p>
+                        Cette SAE se composait de deux volets complémentaires. La première partie, CYBER, avait pour objectif la découverte et l’audit d’un réseau local intentionnellement vulnérable. Nous avons configuré le matériel (borne Linksys, Raspberry Pi pour Kali et RasPwnOS, postes Debian), puis réalisé des scans réseau et des inventaires de services à l’aide d’outils comme arp-scan, nmap, curl, Nessus puis Metasploit. Les travaux ont inclus l’analyse de serveurs web (Apache, Nginx), la capture et l’analyse de trames avec Wireshark, l’importation des résultats Nessus dans Metasploit, et l’identification de CVE exploitables. Nous avons également pratiqué des attaques web courantes (XSS, LFI, path traversal, SQLi) sur des plateformes vulnérables (DVWA, OWASP Bricks) et utilisé Burp Suite pour manipuler les requêtes quand les protections étaient plus strictes.
+                    </p>
+                    <p>
+                        La seconde partie, IOM (Sens client‑serveur / IoT), portait sur la mise en place d’un service web et d’un client distant relié à des objets (ESP/Arduino, RPi). Après installation d’un serveur web sur RPi (Debian/Bullseye) et configuration des droits (/var/www/html et dossier txt_files), nous avons développé des pages PHP/Flask pour recevoir et stocker des données, géré les certificats et les contraintes réseau (portail captif, WPA2), et réalisé l’envoi de données depuis des ESP/Arduino (envoi de températures via URL). Le travail a inclus la sécurisation des entrées (correction de failles XSS), la gestion des permissions, et la vérification dynamique des fichiers de collecte (exemple.txt) avec contrôle enseignant pour valider les jalons.
+                    </p>
+                    <p>
+                        Ce projet a permis d’acquérir des compétences techniques concrètes : administration de services (Apache, MySQL, Samba), scripting et développement web (PHP, Flask), investigations réseau (nmap, Wireshark), tests d’intrusion (Nessus, Metasploit, Burp), et intégration IoT (ESP/Arduino, RPi). Il a aussi renforcé nos capacités méthodologiques : mise en place d’environnements reproductibles, documentation des captures et scripts, identification et mitigation de vulnérabilités, et travail en binôme/trinôme pour gérer matériel et scénarios de test.
+                    </p>
+                    <a href="Rapport IOM.pdf">rapport iom</a>
+                    <a href="Jalon 1 cyber.pdf">jalon 1 cyber</a>
+                    <a href="jalon 2 cyber.pdf">jalon 2 cyber</a>
+                    <a href="jalon 3 cyber.pdf">jalon 3 cyber</a>
+                    <a href="jalon 4 cyber.pdf">jalon 4 cyber</a>
+                    <a href="jalon 6 cyber.pdf">jalon 6 cyber</a>
+                    <div class="project-details">
+                        <h3>🎯 Objectifs réalisés</h3>
+                        <ul>
+                            <li>Mise en place d’un réseau client/serveur sécurisé</li>
+                            <li>Configuration d’un serveur web et de scripts de collecte de données</li>
+                            <li>Intégration d’objets connectés (ESP8266) et envoi de mesures vers le serveur</li>
+                            <li>Analyse et exploitation de vulnérabilités réseau et web</li>
+                            <li>Utilisation d’outils professionnels de cybersécurité (nmap, Nessus, Metasploit, Wireshark)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="projet inte.png" alt="topologie">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
